@@ -15,8 +15,16 @@ use Mix.Config
 # which you typically run after static files are built.
 config :synapi, SynapiWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  http: [host: "385.elliotgluck.com", port: 80],
+  https: [
+    port: 443,
+    keyfile: "/etc/letsencrypt/live/385.elliotgluck.com/privkey.pem",
+    certfile: "/etc/letsencrypt/live/385.elliotgluck.com/fullchain.pem"
+  ],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  server: true,
+  root: ".",
+  version: Application.spec(:SynapiWeb, :vsn)
 
 # Do not print debug messages in production
 config :logger, level: :info

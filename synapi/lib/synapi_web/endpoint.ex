@@ -38,6 +38,7 @@ defmodule SynapiWeb.Endpoint do
     key: "_synapi_key",
     signing_salt: "biekOmt6"
 
+  plug CORSPlug
   plug SynapiWeb.Router
 
   @doc """
