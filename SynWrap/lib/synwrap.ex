@@ -48,8 +48,9 @@ defmodule Synwrap do
       attributes = assignment |> Meeseeks.attrs()
       {_, name} = attributes |> Enum.at(1)
       {_, type} = attributes |> Enum.at(2)
-      {_, score} = attributes|> Enum.at(5)
-      %Synwrap.Assignments{name: name, type: type, score: score}
+      {_, score} = attributes|> Enum.at(7)
+      {_, notes} = attributes |> Enum.at(8)
+      %Synwrap.Assignments{name: name, type: type, score: score, notes: notes}
 
     end
   end
