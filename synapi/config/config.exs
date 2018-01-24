@@ -7,7 +7,6 @@ use Mix.Config
 
 # Configures the endpoint
 config :synapi, SynapiWeb.Endpoint,
-  url: [host: "localhost"],
   secret_key_base: "QFpueSAk+g03spCwOq2BowCwCJMGuQvfaIyeomHR0/QdrAj5KzMT4kzu5ickpK/q",
   render_errors: [view: SynapiWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Synapi.PubSub,

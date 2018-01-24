@@ -40,7 +40,8 @@ defmodule Synapi.Mixfile do
       {:cowboy, "~> 1.0"},
       {:synwrap, path: "../SynWrap"},
       {:cors_plug, "~> 1.2"},
-      {:distillery, "~> 1.5", runtime: false}
+      {:distillery, "~> 1.5", runtime: false},
+      {:graphitex, "~> 0.1.0"}
     ]
   end
 end

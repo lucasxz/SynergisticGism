@@ -15,7 +15,6 @@ use Mix.Config
 # which you typically run after static files are built.
 config :synapi, SynapiWeb.Endpoint,
   load_from_system_env: true,
-  http: [host: "385.elliotgluck.com", port: 80],
   https: [
     port: 443,
     keyfile: "/etc/letsencrypt/live/385.elliotgluck.com/privkey.pem",
