@@ -50,9 +50,19 @@ defmodule Synwrap do
       {_, type} = attributes |> Enum.at(2)
       {_, score} = attributes|> Enum.at(7)
       {_, notes} = attributes |> Enum.at(8)
-      %Synwrap.Assignments{name: name, type: type, score: score, notes: notes}
+      %Synwrap.Assignments{name: name, type: type, score: parsepoints(score), notes: notes}
 
     end
   end
-
+  
+  defp parsepoints(text) do
+    cond  do
+      String.contains?(text, "Possible") == true -> 
+        num = text |> String.split(" ") |> Enum.at(0) |> String.to_float()
+        %Synwrap.Scores{points: nil, pointspossible: num}
+      true ->
+        num = text |> String.split(" / ") |> Enum.map(fn x -> String.to_float(x) end)
+        %Synwrap.Scores{points: Enum.at(num, 0), pointspossible: Enum.at(num, 1)}
+    end
+  end 
 end

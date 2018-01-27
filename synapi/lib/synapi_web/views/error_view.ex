@@ -2,11 +2,11 @@ defmodule SynapiWeb.ErrorView do
   use SynapiWeb, :view
 
   def render("404.html", _assigns) do
-    "Page not found"
+    "Sorry nothing here"
   end
 
   def render("500.html", _assigns) do
-    "Internal server error"
+    "Looks like something happened!"
   end
 
   # In case no render clause matches or no
