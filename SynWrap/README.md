@@ -1,21 +1,14 @@
 # Synwrap
 
-**TODO: Add description**
+A wrapper than converts XML outputted by Edupoint's Synergy API to a JSON format
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `synwrap` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:synwrap, "~> 0.1.0"}
+    {:synwrap, path: "directory"}
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/synwrap](https://hexdocs.pm/synwrap).
-
